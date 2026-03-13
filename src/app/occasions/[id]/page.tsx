@@ -38,55 +38,57 @@ export default async function OccasionDetailPage({ params }: Props) {
   const galleryImages = Array.from({ length: 5 }, () => auto.afbeelding);
 
   return (
-    <div className="mx-auto max-w-[1536px] px-4 py-16 sm:px-6 lg:px-8">
+    <div className="mx-auto w-full max-w-[1536px] overflow-x-hidden px-4 py-16 sm:px-6 lg:px-8">
       <Link
         href="/occasions"
-        className="mb-8 inline-flex items-center text-sm text-gray-600 hover:text-[#1e3a5f]"
+        className="mb-8 inline-flex items-center text-sm text-gray-400 hover:text-blue-400"
       >
         ← Terug naar overzicht
       </Link>
 
-      <div className="grid gap-12 lg:grid-cols-2">
+      <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="min-w-0 overflow-hidden">
         <ImageGallery
           images={galleryImages}
           alt={`${auto.merk} ${auto.model}`}
         />
+        </div>
 
-        <div>
-          <h1 className="font-serif text-2xl font-bold text-[#1e3a5f] sm:text-3xl">
+        <div className="min-w-0">
+          <h1 className="font-serif text-2xl font-bold text-white sm:text-3xl">
             {auto.merk} {auto.model}
           </h1>
-          <p className="mt-4 text-2xl font-semibold text-gray-900">
+          <p className="mt-4 text-2xl font-semibold text-white">
             {formatPrijs(auto.prijs)}
           </p>
 
           <dl className="mt-6 grid gap-3 sm:grid-cols-2">
             <div>
-              <dt className="text-sm text-gray-500">Bouwjaar</dt>
-              <dd className="font-medium">{auto.bouwjaar}</dd>
+              <dt className="text-sm text-gray-400">Bouwjaar</dt>
+              <dd className="font-medium text-white">{auto.bouwjaar}</dd>
             </div>
             <div>
-              <dt className="text-sm text-gray-500">Kilometerstand</dt>
-              <dd className="font-medium">{formatKilometerstand(auto.kilometerstand)}</dd>
+              <dt className="text-sm text-gray-400">Kilometerstand</dt>
+              <dd className="font-medium text-white">{formatKilometerstand(auto.kilometerstand)}</dd>
             </div>
             <div>
-              <dt className="text-sm text-gray-500">Brandstof</dt>
-              <dd className="font-medium">{auto.brandstof}</dd>
+              <dt className="text-sm text-gray-400">Brandstof</dt>
+              <dd className="font-medium text-white">{auto.brandstof}</dd>
             </div>
             <div>
-              <dt className="text-sm text-gray-500">Transmissie</dt>
-              <dd className="font-medium">{auto.transmissie}</dd>
+              <dt className="text-sm text-gray-400">Transmissie</dt>
+              <dd className="font-medium text-white">{auto.transmissie}</dd>
             </div>
           </dl>
 
-          <p className="mt-6 text-gray-600">
+          <p className="mt-6 text-gray-400">
             Interesse in deze occasion? Neem contact met ons op voor een proefrit of meer informatie.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="tel:+31630286332"
-              className="inline-flex items-center gap-2 rounded-lg bg-[#1e3a5f] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#152a45]"
+              className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg bg-[#1e3a5f] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#152a45] active:bg-[#0f1f33]"
             >
               <svg
                 className="h-5 w-5"
@@ -105,7 +107,7 @@ export default async function OccasionDetailPage({ params }: Props) {
             </a>
             <a
               href={`mailto:info@jsautos.nl?subject=Interesse in ${encodeURIComponent(auto.merk + " " + auto.model)}`}
-              className="inline-flex items-center gap-2 rounded-lg border-2 border-[#1e3a5f] px-6 py-3 font-semibold text-[#1e3a5f] transition-colors hover:bg-[#1e3a5f]/5"
+              className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg border-2 border-blue-500 px-6 py-3 font-semibold text-blue-400 transition-colors hover:bg-blue-500/10 active:bg-blue-500/20"
             >
               E-mail sturen
             </a>
