@@ -5,27 +5,27 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto max-w-[1536px] px-4 py-16 sm:px-6 lg:px-8">
+    <div className="mx-auto w-full max-w-[1536px] overflow-x-hidden px-4 py-16 sm:px-6 lg:px-8">
       <div className="text-center">
-        <h1 className="font-serif text-3xl font-bold text-[#1e3a5f] sm:text-4xl">
+        <h1 className="font-serif text-3xl font-bold text-white sm:text-4xl">
           Contact
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+        <p className="mx-auto mt-4 max-w-2xl text-gray-400">
           Heeft u vragen over een occasion, wilt u uw auto inruilen of verkopen? Neem gerust contact met ons op.
         </p>
       </div>
 
-      <div className="mt-16 grid gap-12 lg:grid-cols-2">
+      <div className="mt-16 grid gap-8 lg:grid-cols-2 lg:gap-12">
         {/* Contactgegevens */}
-        <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-          <h2 className="font-serif text-xl font-semibold text-[#1e3a5f]">
+        <div className="rounded-2xl border border-zinc-700 bg-zinc-900 p-6 shadow-sm sm:p-8">
+          <h2 className="font-serif text-xl font-semibold text-white">
             Onze gegevens
           </h2>
           <div className="mt-6 space-y-6">
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#1e3a5f]/10">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-blue-500/20">
                 <svg
-                  className="h-6 w-6 text-[#1e3a5f]"
+                  className="h-6 w-6 text-blue-400"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -45,8 +45,8 @@ export default function ContactPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-medium text-gray-900">Bezoekadres</h3>
-                <p className="mt-1 text-gray-600">
+                <h3 className="font-medium text-white">Bezoekadres</h3>
+                <p className="mt-1 text-gray-400">
                   A.G. Bellstraat 53
                   <br />
                   7903 BB Hoogeveen
@@ -55,16 +55,16 @@ export default function ContactPage() {
                   href="https://maps.google.com/?q=A.G.+Bellstraat+53,+7903+BB+Hoogeveen"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-block text-sm font-medium text-[#1e3a5f] hover:underline"
+                  className="mt-2 inline-block text-sm font-medium text-blue-400 hover:underline"
                 >
                   Bekijk op Google Maps →
                 </a>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#1e3a5f]/10">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-blue-500/20">
                 <svg
-                  className="h-6 w-6 text-[#1e3a5f]"
+                  className="h-6 w-6 text-blue-400"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -78,19 +78,19 @@ export default function ContactPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-medium text-gray-900">Telefoon</h3>
+                <h3 className="font-medium text-white">Telefoon</h3>
                 <a
                   href="tel:+31630286332"
-                  className="mt-1 block text-gray-600 hover:text-[#1e3a5f]"
+                  className="mt-1 block text-gray-400 hover:text-blue-400"
                 >
                   06-30 286 332
                 </a>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#1e3a5f]/10">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-blue-500/20">
                 <svg
-                  className="h-6 w-6 text-[#1e3a5f]"
+                  className="h-6 w-6 text-blue-400"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -104,10 +104,10 @@ export default function ContactPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-medium text-gray-900">E-mail</h3>
+                <h3 className="font-medium text-white">E-mail</h3>
                 <a
                   href="mailto:info@jsautos.nl"
-                  className="mt-1 block text-gray-600 hover:text-[#1e3a5f]"
+                  className="mt-1 block text-gray-400 hover:text-blue-400"
                 >
                   info@jsautos.nl
                 </a>
@@ -118,26 +118,26 @@ export default function ContactPage() {
 
         {/* Openingstijden / Extra info */}
         <div className="space-y-8">
-          <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-            <h2 className="font-serif text-xl font-semibold text-[#1e3a5f]">
+          <div className="rounded-2xl border border-zinc-700 bg-zinc-900 p-6 shadow-sm sm:p-8">
+            <h2 className="font-serif text-xl font-semibold text-white">
               Bedrijfsgegevens
             </h2>
-            <ul className="mt-6 space-y-2 text-sm text-gray-600">
+            <ul className="mt-6 space-y-2 text-sm text-gray-400">
               <li>
-                <span className="font-medium text-gray-900">KvK:</span> 70196389
+                <span className="font-medium text-white">KvK:</span> 70196389
               </li>
               <li>
-                <span className="font-medium text-gray-900">BTW:</span> NL221561298B01
+                <span className="font-medium text-white">BTW:</span> NL221561298B01
               </li>
               <li>
-                <span className="font-medium text-gray-900">IBAN:</span> NL33 RABO 0325 5530 92
+                <span className="font-medium text-white">IBAN:</span> NL33 RABO 0325 5530 92
               </li>
               <li>
-                <span className="font-medium text-gray-900">BIC:</span> RABONL2U
+                <span className="font-medium text-white">BIC:</span> RABONL2U
               </li>
             </ul>
           </div>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-500 dark:text-gray-400">
             Wij zijn bereikbaar voor afspraken en vragen. Neem gerust contact op voor een vrijblijvend gesprek over uw autobehoeften.
           </p>
         </div>

@@ -3,7 +3,7 @@ import OccasionsSlider from "@/components/OccasionsSlider";
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {/* Hero sectie */}
       <section
         className="relative overflow-hidden py-20 sm:py-28"
@@ -13,21 +13,21 @@ export default function Home() {
           backgroundPosition: "50% 50%",
         }}
       >
-        <div className="absolute inset-0 bg-[#1e3a5f]/75" />
+        <div className="absolute inset-0 bg-black/70" />
         <div className="relative z-10 mx-auto max-w-[1536px] px-4 text-center sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl font-bold text-white sm:text-5xl md:text-6xl">
             JS Auto&apos;s
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-xl text-blue-100 sm:text-2xl">
+          <p className="mx-auto mt-4 max-w-2xl text-xl text-gray-200 sm:text-2xl">
             In- en verkoop van gebruikte auto&apos;s
           </p>
-          <p className="mx-auto mt-6 max-w-xl text-base text-blue-200">
+          <p className="mx-auto mt-6 max-w-xl text-base text-gray-300">
             Uw betrouwbare partner in Hoogeveen voor kwaliteitsvolle occasions. Transparant, eerlijk en met persoonlijke service.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="flex min-h-[48px] items-center justify-center rounded-lg bg-white px-8 py-3 font-semibold text-[#1e3a5f] transition-colors hover:bg-blue-50 active:bg-blue-100"
+              className="flex min-h-[48px] items-center justify-center rounded-lg bg-white px-8 py-3 font-semibold text-black transition-colors hover:bg-gray-100 active:bg-gray-200"
             >
               Neem contact op
             </Link>
@@ -46,49 +46,49 @@ export default function Home() {
       {/* Diensten sectie */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-[1536px] px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center font-serif text-3xl font-bold text-[#1e3a5f] sm:text-4xl">
+          <h2 className="text-center font-serif text-3xl font-bold text-white sm:text-4xl">
             Onze diensten
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-gray-600">
+          <p className="mx-auto mt-4 max-w-2xl text-center text-gray-400">
             Wij bieden een compleet pakket voor uw autobehoeften
           </p>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md">
+            <div className="rounded-xl border border-zinc-700 bg-zinc-900 p-5 shadow-sm transition-shadow hover:border-zinc-600">
               <div className="flex items-center gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1e3a5f]/10 text-[#1e3a5f]">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-gray-900">Occasions kopen</h3>
+                <h3 className="font-semibold text-white">Occasions kopen</h3>
               </div>
-              <p className="mt-3 text-sm text-gray-600">
+              <p className="mt-3 text-sm text-gray-400">
                 Kies uit ons aanbod van zorgvuldig geselecteerde gebruikte auto&apos;s. Alle voertuigen zijn gecontroleerd en klaar voor gebruik.
               </p>
             </div>
-            <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md">
+            <div className="rounded-xl border border-zinc-700 bg-zinc-900 p-5 shadow-sm transition-shadow hover:border-zinc-600">
               <div className="flex items-center gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1e3a5f]/10 text-[#1e3a5f]">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-gray-900">Inruilen</h3>
+                <h3 className="font-semibold text-white">Inruilen</h3>
               </div>
-              <p className="mt-3 text-sm text-gray-600">
+              <p className="mt-3 text-sm text-gray-400">
                 Wilt u uw huidige auto inruilen? Wij geven een eerlijke en transparante taxatie. Inruilen maakt uw nieuwe occasion betaalbaarder.
               </p>
             </div>
-            <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md">
+            <div className="rounded-xl border border-zinc-700 bg-zinc-900 p-5 shadow-sm transition-shadow hover:border-zinc-600">
               <div className="flex items-center gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#1e3a5f]/10 text-[#1e3a5f]">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400">
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-gray-900">Verkoop van uw auto</h3>
+                <h3 className="font-semibold text-white">Verkoop van uw auto</h3>
               </div>
-              <p className="mt-3 text-sm text-gray-600">
+              <p className="mt-3 text-sm text-gray-400">
                 Heeft u een auto te koop? Neem contact met ons op. Wij kopen uw auto graag over tegen een marktconforme prijs.
               </p>
             </div>
@@ -97,19 +97,19 @@ export default function Home() {
       </section>
 
       {/* Contact CTA sectie */}
-      <section className="bg-gray-50 py-16 sm:py-24">
+      <section className="bg-zinc-900/50 py-16 sm:py-24">
         <div className="mx-auto max-w-[1536px] px-4 sm:px-6 lg:px-8">
-          <div className="overflow-hidden rounded-2xl bg-[#1e3a5f] p-8 text-center sm:p-12">
+          <div className="overflow-hidden rounded-2xl border border-zinc-700 bg-zinc-900 p-8 text-center sm:p-12">
             <h2 className="font-serif text-2xl font-bold text-white sm:text-3xl">
               Klaar voor een nieuwe occasion?
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-blue-100">
+            <p className="mx-auto mt-4 max-w-xl text-gray-300">
               Neem vrijblijvend contact op. Wij helpen u graag bij het vinden van de juiste auto of het verkopen van uw huidige voertuig.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
                 href="tel:+31630286332"
-                className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-[#1e3a5f] transition-colors hover:bg-blue-50"
+                className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-black transition-colors hover:bg-gray-100 active:bg-gray-200"
               >
                 <svg
                   className="h-5 w-5"
@@ -128,7 +128,7 @@ export default function Home() {
               </a>
               <a
                 href="mailto:info@jsautos.nl"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-white/50 px-6 py-3 font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
+                className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg border-2 border-white/50 px-6 py-3 font-semibold text-white transition-colors hover:border-white hover:bg-white/10 active:bg-white/20"
               >
                 <svg
                   className="h-5 w-5"

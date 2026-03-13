@@ -31,11 +31,11 @@ export default function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#1e3a5f]/10 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-[1536px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/95 backdrop-blur">
+      <div className="mx-auto flex w-full max-w-[1536px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="font-serif text-2xl font-bold text-[#1e3a5f] transition-colors hover:text-[#2d5a8a] sm:text-3xl"
+          className="font-serif text-2xl font-bold text-white transition-colors hover:text-blue-400 sm:text-3xl"
         >
           JS Auto&apos;s
         </Link>
@@ -48,8 +48,8 @@ export default function Header() {
               href={item.href}
               className={`text-sm font-medium transition-colors sm:text-base ${
                 pathname === item.href
-                  ? "text-[#1e3a5f]"
-                  : "text-gray-600 hover:text-[#1e3a5f]"
+                  ? "text-blue-400"
+                  : "text-gray-300 hover:text-blue-400"
               }`}
             >
               {item.label}
@@ -60,7 +60,7 @@ export default function Header() {
         {/* Hamburger button - mobile */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-[#1e3a5f] transition-colors hover:bg-gray-100 md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-white transition-colors hover:bg-white/10 md:hidden"
           aria-label={isMenuOpen ? "Menu sluiten" : "Menu openen"}
           aria-expanded={isMenuOpen}
         >
@@ -85,7 +85,7 @@ export default function Header() {
             aria-hidden="true"
           />
           <nav
-            className="fixed left-0 right-0 top-[57px] z-50 border-b border-[#1e3a5f]/10 bg-white px-4 py-4 shadow-lg md:hidden"
+            className="fixed left-0 right-0 top-[57px] z-50 border-b border-white/10 bg-black px-4 py-4 shadow-lg md:hidden"
             aria-label="Navigatie"
           >
             <ul className="flex flex-col gap-1">
@@ -96,8 +96,8 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                     className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors ${
                       pathname === item.href
-                        ? "bg-[#1e3a5f]/10 text-[#1e3a5f]"
-                        : "text-gray-700 hover:bg-gray-100"
+                        ? "bg-blue-500/20 text-blue-400"
+                        : "text-gray-300 hover:bg-white/10"
                     }`}
                   >
                     {item.label}

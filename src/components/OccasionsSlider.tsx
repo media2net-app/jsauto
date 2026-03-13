@@ -46,15 +46,15 @@ export default function OccasionsSlider() {
   }, []);
 
   return (
-    <section className="border-b border-gray-100 bg-white py-12 sm:py-16">
-      <div className="mx-auto max-w-[1536px] px-4 sm:px-6 lg:px-8">
+    <section className="border-b border-zinc-800 bg-zinc-900/50 py-12 sm:py-16">
+      <div className="mx-auto w-full max-w-[1536px] overflow-x-hidden px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between gap-4">
-          <h2 className="font-serif text-2xl font-bold text-[#1e3a5f] sm:text-3xl">
+          <h2 className="font-serif text-2xl font-bold text-white sm:text-3xl">
             Nieuw binnen
           </h2>
           <Link
             href="/occasions"
-            className="text-sm font-medium text-[#1e3a5f] hover:underline sm:text-base"
+            className="text-sm font-medium text-blue-400 hover:underline sm:text-base"
           >
             Bekijk alle occasions →
           </Link>
@@ -76,8 +76,8 @@ export default function OccasionsSlider() {
                 className="group w-[280px] shrink-0 sm:w-[300px]"
                 style={{ scrollSnapAlign: "start" }}
               >
-                <article className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:border-[#1e3a5f]/30 hover:shadow-md">
-                  <div className="relative aspect-[4/3] bg-gray-100">
+                <article className="overflow-hidden rounded-xl border border-zinc-700 bg-zinc-900 shadow-sm transition-all hover:border-blue-500/50">
+                  <div className="relative aspect-[4/3] bg-zinc-800">
                     <Image
                       src={auto.afbeelding}
                       alt={`${auto.merk} ${auto.model}`}
@@ -85,15 +85,15 @@ export default function OccasionsSlider() {
                       className="object-cover transition-transform group-hover:scale-[1.02]"
                       sizes="300px"
                     />
-                    <div className="absolute right-2 top-2 rounded bg-[#1e3a5f] px-2.5 py-1 text-xs font-semibold text-white">
+                    <div className="absolute right-2 top-2 rounded bg-blue-600 px-2.5 py-1 text-xs font-semibold text-white">
                       {formatPrijs(auto.prijs)}
                     </div>
                   </div>
                   <div className="p-4">
-                    <h3 className="font-semibold text-gray-900 group-hover:text-[#1e3a5f]">
+                    <h3 className="font-semibold text-white group-hover:text-blue-400">
                       {auto.merk} {auto.model}
                     </h3>
-                    <p className="mt-1 text-sm text-gray-600">
+                    <p className="mt-1 text-sm text-gray-400">
                       {auto.bouwjaar} · {formatKilometerstand(auto.kilometerstand)}
                     </p>
                   </div>
@@ -105,11 +105,11 @@ export default function OccasionsSlider() {
           {/* Navigation buttons - hidden on mobile, visible on larger screens */}
           <button
             onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 hidden -translate-y-1/2 rounded-full bg-white p-2 shadow-lg transition-colors hover:bg-gray-50 lg:-left-4 lg:block"
+            className="absolute left-0 top-1/2 hidden -translate-y-1/2 rounded-full bg-zinc-800 p-2 shadow-lg transition-colors hover:bg-zinc-700 lg:-left-4 lg:block"
             aria-label="Vorige"
           >
             <svg
-              className="h-5 w-5 text-[#1e3a5f]"
+              className="h-5 w-5 text-blue-400"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -124,11 +124,11 @@ export default function OccasionsSlider() {
           </button>
           <button
             onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 hidden -translate-y-1/2 rounded-full bg-white p-2 shadow-lg transition-colors hover:bg-gray-50 lg:-right-4 lg:block"
+            className="absolute right-0 top-1/2 hidden -translate-y-1/2 rounded-full bg-zinc-800 p-2 shadow-lg transition-colors hover:bg-zinc-700 lg:-right-4 lg:block"
             aria-label="Volgende"
           >
             <svg
-              className="h-5 w-5 text-[#1e3a5f]"
+              className="h-5 w-5 text-blue-400"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
