@@ -16,12 +16,12 @@ export default function ImageGallery({ images, alt }: ImageGalleryProps) {
 
   return (
     <>
-      <div className="space-y-4">
+      <div className="min-w-0 max-w-full space-y-4">
         {/* Main image - clickable voor lightbox */}
         <button
           type="button"
           onClick={() => setIsLightboxOpen(true)}
-          className="relative block aspect-[4/3] w-full overflow-hidden rounded-xl bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#1e3a5f] focus:ring-offset-2"
+          className="relative block aspect-[4/3] w-full min-w-0 overflow-hidden rounded-xl bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
           aria-label="Afbeelding vergroten"
         >
           <Image
@@ -51,15 +51,15 @@ export default function ImageGallery({ images, alt }: ImageGalleryProps) {
         </button>
 
         {/* Thumbnail strip */}
-        <div className="flex gap-2 overflow-x-auto pb-2">
+        <div className="flex gap-2 overflow-x-auto overflow-y-hidden pb-2 scrollbar-hide">
           {images.map((img, index) => (
             <button
               key={index}
               type="button"
               onClick={() => setSelectedIndex(index)}
-              className={`relative h-16 w-24 shrink-0 overflow-hidden rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-[#1e3a5f] focus:ring-offset-2 ${
+              className={`relative h-16 w-24 shrink-0 overflow-hidden rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black ${
                 selectedIndex === index
-                  ? "ring-2 ring-[#1e3a5f] ring-offset-2"
+                  ? "ring-2 ring-blue-500 ring-offset-2 ring-offset-black"
                   : "opacity-70 hover:opacity-100"
               }`}
             >
@@ -118,7 +118,7 @@ function Lightbox({
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex flex-col bg-black/95"
+      className="fixed inset-0 z-[100] flex flex-col bg-black/95 pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]"
       role="dialog"
           aria-modal="true"
           aria-label="Afbeeldingen galerij"
@@ -129,7 +129,7 @@ function Lightbox({
               e.stopPropagation();
               onClose();
             }}
-            className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+            className="absolute right-4 top-4 z-10 flex h-10 w-10 min-w-[44px] min-h-[44px] items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 active:bg-white/30 touch-manipulation"
             aria-label="Sluiten"
           >
             <svg
@@ -148,7 +148,7 @@ function Lightbox({
           </button>
 
           <div
-            className="flex flex-1 items-center justify-center p-4 pt-16"
+            className="flex flex-1 items-center justify-center p-4 pt-20 sm:pt-16"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -200,7 +200,7 @@ function Lightbox({
                     selectedIndex === 0 ? images.length - 1 : selectedIndex - 1
                   );
                 }}
-                className="absolute left-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+                className="absolute left-2 top-1/2 -translate-y-1/2 flex h-12 w-12 min-w-[48px] min-h-[48px] items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 active:bg-white/30 touch-manipulation sm:left-4"
                 aria-label="Vorige foto"
               >
                 <svg
@@ -226,7 +226,7 @@ function Lightbox({
                       : selectedIndex + 1
                   );
                 }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+                className="absolute right-2 top-1/2 -translate-y-1/2 flex h-12 w-12 min-w-[48px] min-h-[48px] items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 active:bg-white/30 touch-manipulation sm:right-4"
                 aria-label="Volgende foto"
               >
                 <svg
